@@ -1,0 +1,13 @@
+.img-user-header {
+    max-height: 50px !important;
+}
+
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
