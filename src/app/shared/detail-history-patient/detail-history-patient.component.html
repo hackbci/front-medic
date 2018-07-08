@@ -2,8 +2,8 @@
   <mat-accordion *ngFor="let specialities of history">
 
     <!-- start medical speciality 1 -->
-    <mat-expansion-panel *ngFor="let speciality of specialities.speciality" class="expantion-panel-1" (opened)="panelOpenState1 = true"
-      (closed)="panelOpenState1 = false">
+    <mat-expansion-panel *ngFor="let speciality of specialities.speciality" class="expantion-panel-1" (opened)="panelOpenState1($event, true)"
+      (closed)="panelOpenState1($event, false)">
 
       <mat-expansion-panel-header>
         <mat-panel-title>

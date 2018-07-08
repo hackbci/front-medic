@@ -8,7 +8,6 @@ import {FlatTreeControl} from '@angular/cdk/tree';
   styleUrls: ['./detail-history-patient.component.scss']
 })
 export class DetailHistoryPatientComponent {
-  panelOpenState1 = false;
   panelOpenState2 = false;
   panelOpenState3 = false;
 
@@ -17,6 +16,8 @@ export class DetailHistoryPatientComponent {
   constructor(private _serviceHistory: HistoryPatientService) {
     this._serviceHistory.getHistory().subscribe((response: any) => { this.history = response; console.log(this.history);  });
   }
-
+  panelOpenState1(event) {
+    console.log(event);
+  }
 
 }

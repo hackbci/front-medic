@@ -5,7 +5,7 @@
 
     <app-review-patient [fieldsForm]="fieldsForm"></app-review-patient>
 
-    <div *ngIf="fieldsForm.number_identification == ''" class="d-flex justify-content-center w-100 mt-5 pt-5" cursor-pointer>
+    <div *ngIf="fieldsForm.model == ''" class="d-flex justify-content-center w-100 mt-5 pt-5" cursor-pointer>
       <span>
         <button color="primary" no-outline mat-button mat-stroked-button mat-fab no-select>
           <i class="material-icons add-icon" text-size-33>
@@ -16,7 +16,7 @@
       </span>
     </div>
 
-    <div *ngIf="fieldsForm.number_identification != ''" class="d-flex justify-content-end w-100 mt-5 pb-3" padding-x-8>
+    <div *ngIf="fieldsForm.model != ''" class="d-flex justify-content-end w-100 mt-5 pb-3" padding-x-8>
 
       <button routerLink="/form-patient" class="btn-add-visit text-uppercase" text-size-18 mat-raised-button color="primary">
         <span text-weight-200> Agregar consulta </span>
@@ -24,7 +24,7 @@
 
     </div>
 
-    <app-detail-history-patient *ngIf="fieldsForm.number_identification != ''">
+    <app-detail-history-patient *ngIf="fieldsForm.model != ''">
 
     </app-detail-history-patient>
 

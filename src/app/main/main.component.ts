@@ -7,18 +7,18 @@ import { Component, OnInit} from '@angular/core';
 })
 export class MainComponent {
 
-  fieldsForm =     {
+  fieldsForm = {
     createdAt: 1530995598336,
     updatedAt: 1530995598336,
     id: '5b41238e667b97012226dd99',
-    first_name: 'Example',
-    last_name: 'Example',
+    first_name: 'Guillermo',
+    last_name: 'González',
     date: '07/07/2018',
     birthdate: '07/07/2018',
     age: '12',
     sex: 'Masculino',
     type_identification: 'RUT',
-    number_identification: '',
+    number_identification: '25529797k',
     nacionality: 'Chileno',
     forecast: 'asdasdasd',
     activity: 'Programador',
@@ -38,7 +38,8 @@ export class MainComponent {
     allergies: 'asd',
     social_personal_background: 'asd',
     family_background: 'asd',
-    immunizations: 'asd'
+    immunizations: 'asd',
+    model: ''
   };
   constructor() { }
 
