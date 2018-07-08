@@ -2,7 +2,7 @@
   <div class="row w-100">
     <div class="order-md-6 col-md-5 col-sm-12 mb-4 pr-0" padding-l-16>
 
-      <div *ngIf="fieldsForm.number_identification != 54" class="px-5">
+      <div *ngIf="fieldsForm.number_identification != ''" class="px-5">
         <img class="w-100" src="https://randomuser.me/api/portraits/men/11.jpg" alt="">
       </div>
 
@@ -10,10 +10,10 @@
     <div class="order-md-1 col-md-7 col-sm-12" padding-l-16>
 
       <mat-form-field class="w-100">
-        <input matInput color-800 text-size-40 placeholder="Introduzca el RUT" [(ngModel)]="fieldsForm.number_identification">
+        <input matInput color-800 text-size-40 placeholder="Introduzca el RUT" appRut2 [(ngModel)]="fieldsForm.number_identification">
       </mat-form-field>
 
-      <div *ngIf="fieldsForm.number_identification != 54">
+      <div *ngIf="fieldsForm.number_identification != ''">
 
         <p color-800 class="m-0">
           <span text-weight-100 color-600>Nombre(s): </span> {{ fieldsForm.first_name }}</p>
@@ -69,23 +69,5 @@
       </div>
 
     </div>
-    
-    <!-- <mat-form-field class="col-md-6 col-sm-12">
-          <input matInput [(ngModel)]="fieldsForm.first_name" placeholder="Primer Nombre">
-        </mat-form-field>
-        <mat-form-field class="col-md-6 col-sm-12">
-          <input matInput [(ngModel)]="fieldsForm.last_name" placeholder="Segundo Nombre">
-        </mat-form-field>
-        <mat-form-field class="col-md-6 col-sm-12">
-          <input matInput placeholder="RUT" [(ngModel)]="fieldsForm.number_identification" >
-        </mat-form-field>
-        <mat-form-field class="col-md-6 col-sm-12">
-          <input matInput [(ngModel)]="fieldsForm.first_name" placeholder="Primer Nombre">
-        </mat-form-field>
-        <mat-form-field class="col-md-6 col-sm-12">
-          <input matInput [(ngModel)]="fieldsForm.last_name" placeholder="Segundo Nombre">
-        </mat-form-field> -->
-
-
 
   </div>

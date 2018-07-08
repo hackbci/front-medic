@@ -26,6 +26,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { RegistryPatientComponent } from './views/registry-patient/registry-patient.component';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RutDirective } from './directive/rut.directive';
 
 /* const appRoutes: Routes = [
   { path: 'crisis-center', component: CrisisListComponent },
@@ -69,7 +70,8 @@ const appRoutes: Routes = [
     ReviewPatientComponent,
     DetailHistoryPatientComponent,
     HeaderComponent,
-    RegistryPatientComponent
+    RegistryPatientComponent,
+    RutDirective
   ],
   imports: [
     BrowserModule,

@@ -29,12 +29,12 @@
           </mat-panel-description>
         </mat-expansion-panel-header>
         <!-- start medical visit -->
-        <mat-expansion-panel *ngFor="let item of case.consultation; let index = index" class="expantion-panel-3" (opened)="panelOpenState3 = true"
+        <mat-expansion-panel *ngFor="let consult of case.consultation; let index = index" class="expantion-panel-3" (opened)="panelOpenState3 = true"
           (closed)="panelOpenState3 = false">
 
           <mat-expansion-panel-header>
             <mat-panel-title>
-              Consulta {{ index + 1 }}
+              Consulta del {{ consult.date_consultation }} con el Dr(a) {{ consult.doctor }}
             </mat-panel-title>
             <mat-panel-description>
               <!-- Currently I am {{panelOpenState3 ? 'open' : 'closed'}} -->
@@ -42,17 +42,20 @@
           </mat-expansion-panel-header>
           <div class="content-visit pt-3">
               <mat-tab-group class="justify-content-center">
-                <mat-tab label="Síntomas"> 
-                  Síntomas
+                <mat-tab *ngIf="consult.symptom.length > 0" label="Síntomas"> 
+                  <p *ngFor="let symptom of consult.symptom" class="m-0">{{ symptom }}</p>
                 </mat-tab>
-                <mat-tab label="Diagnóstico"> 
-                  Diagnóstico
+                <mat-tab *ngIf="consult.diagnosis" label="Diagnóstico"> 
+                  <p class="m-0"> {{ consult.diagnosis }}</p>
                 </mat-tab>
-                <mat-tab label="Exámenes"> 
-                  Exámenes
+                <mat-tab *ngIf="consult.exams.length > 0" label="Exámenes"> 
+                  <p *ngFor="let exam of consult.exams" class="m-0"> {{ exam }} </p>
                 </mat-tab>
-                <mat-tab label="Tratamiento"> 
-                  Tratamiento
+                <mat-tab *ngIf="consult.indications" label="Tratamiento"> 
+                  <p class="m-0">{{ consult.indications }}</p>
+                </mat-tab>
+                <mat-tab *ngIf="consult.medication.length > 0" label="Medicación"> 
+                  <p *ngFor="let medicine of consult.medication" class="m-0"> {{ medicine.name }}</p>
                 </mat-tab>
               </mat-tab-group>
           </div>

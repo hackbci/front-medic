@@ -1,14 +1,32 @@
-<app-header></app-header>
+<app-header [registering]="true"></app-header>
 
 <div class="container pt-4">
+
   <form class="example-form">
-    <mat-form-field class="example-full-width w-100">
-      <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
-      <mat-autocomplete #auto="matAutocomplete">
-        <mat-option *ngFor="let option of options" [value]="option">
-          {{option}}
+    <mat-form-field class="w-100">
+      <input type="text" placeholder="Assignee" aria-label="Assignee" matInput [(ngModel)]="clinicCase" [formControl]="caseControl"
+        [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          {{option.name}}
         </mat-option>
       </mat-autocomplete>
     </mat-form-field>
+
+    <mat-form-field class="w-100">
+        <input type="text" placeholder="Síntomas" aria-label="Síntomas" matInput [(ngModel)]="sintoma" [formControl]="sintomaControl"
+          [matAutocomplete]="auto2">
+        <mat-autocomplete #auto2="matAutocomplete" [displayWith]="displayFn">
+          <mat-option *ngFor="let option of filteredSintomas | async" [value]="option">
+            {{option.name}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+
+    <mat-form-field class="w-100">
+      <textarea matInput placeholder="Diagnóstico" rows="6"></textarea>
+    </mat-form-field>
+
   </form>
+
 </div>
