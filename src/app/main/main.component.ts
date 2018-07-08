@@ -20,7 +20,7 @@ export class MainComponent {
     type_identification: 'RUT',
     number_identification: '25529797k',
     nacionality: 'Chileno',
-    forecast: 'asdasdasd',
+    forecast: 'Nueva Más Vida',
     activity: 'Programador',
     region: 'LATAM',
     commune: 'Santiago Centro',
