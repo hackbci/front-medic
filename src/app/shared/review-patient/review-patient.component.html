@@ -2,7 +2,7 @@
   <div class="row w-100">
     <div class="order-md-6 col-md-5 col-sm-12 mb-4 pr-0" padding-l-16>
 
-      <div *ngIf="fieldsForm.model != ''" class="px-5">
+      <div *ngIf="fieldsForm.model.length > 11" class="px-5">
         <img class="w-100" src="https://randomuser.me/api/portraits/men/11.jpg" alt="">
       </div>
 
@@ -13,7 +13,7 @@
         <input matInput color-800 text-size-40 placeholder="Introduzca el RUT" appRut2 [(ngModel)]="fieldsForm.model">
       </mat-form-field>
 
-      <div *ngIf="fieldsForm.model != ''">
+      <div *ngIf="fieldsForm.model.length > 11">
 
         <p color-800 class="m-0">
           <span text-weight-100 color-600>Nombre(s): </span> {{ fieldsForm.first_name }}</p>

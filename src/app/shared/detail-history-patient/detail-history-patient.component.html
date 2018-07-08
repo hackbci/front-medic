@@ -51,7 +51,7 @@
                 <mat-tab *ngIf="consult.exams.length > 0" label="Exámenes"> 
                   <p *ngFor="let exam of consult.exams" class="m-0"> {{ exam }} </p>
                 </mat-tab>
-                <mat-tab *ngIf="consult.indications" label="Tratamiento"> 
+                <mat-tab *ngIf="consult.indications" label="Preescripción"> 
                   <p class="m-0">{{ consult.indications }}</p>
                 </mat-tab>
                 <mat-tab *ngIf="consult.medication.length > 0" label="Medicación"> 

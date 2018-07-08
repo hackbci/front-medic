@@ -18,7 +18,7 @@ export class MainComponent {
     age: '12',
     sex: 'Masculino',
     type_identification: 'RUT',
-    number_identification: '25529797k',
+    number_identification: '25.529.797-K',
     nacionality: 'Chileno',
     forecast: 'Nueva Más Vida',
     activity: 'Programador',
