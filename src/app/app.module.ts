@@ -36,7 +36,7 @@ const appRoutes: Routes = [
     redirectTo: '/',
     pathMatch: 'full'
   },
-  { path: '**', component: PatientHistoryComponent}
+  { path: '**', component: MainComponent }
 ];
 
 @NgModule({
