@@ -17,7 +17,6 @@ export class DetailHistoryPatientComponent {
     this._serviceHistory.getHistory().subscribe((response: any) => { this.history = response; console.log(this.history);  });
   }
   panelOpenState1(event) {
-    console.log(event);
   }
 
 }

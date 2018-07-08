@@ -21,10 +21,8 @@ export class RutDirective {
   }
 
   onInputChange($event) {
-    // console.log('rut3', $event);
     let value = '';
     if (!$event.target && !$event._value) {
-      // console.log('aqui 1');
       return;
     } else if ($event.target) {
       value = $event.target.value;
@@ -34,11 +32,9 @@ export class RutDirective {
 
     value = value.replace(/\.|\-/g, '');
     if (value.length < 2) {
-      // console.log('aqui 2');
       return;
     }
      if (!value || value === '') {
-      // console.log('aqui 3');
       return $event.target.value = '';
     }
 
