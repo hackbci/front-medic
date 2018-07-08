@@ -39,7 +39,6 @@ const appRoutes: Routes = [
   { path: '**', component: MainComponent }
 ];
 
-
 @NgModule({
   declarations: [
     AppComponent,
