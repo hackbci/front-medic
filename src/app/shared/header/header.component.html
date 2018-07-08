@@ -1,7 +1,7 @@
 <mat-toolbar>
   <div class="container">
     <div class="d-flex align-items-center justify-content-between">
-      <div>
+      <div routerLink="/patient-history" no-outline cursor-pointer>
         <img class="logo-qh" src="assets/imgs/logo_quark_health.png" alt="">
       </div>
       <span *ngIf="registering" color-700>  
@@ -15,14 +15,14 @@
 
       <div class="d-flex align-items-center" >
         
-        <span class="d-flex mr-2">
+        <span class="d-flex mr-2" cursor-pointer>
 
           <div class="mr-3 mt-1" color-700 text-size-14 line-height-14>
             <p class="m-0 text-right">
-              Nombre Doctor
+              Dra. Claudia Algarrobo
             </p>
             <p class="m-0 text-right">
-              Especialidad
+              Traumatólogo
             </p>
           </div>
 
@@ -32,9 +32,9 @@
 
         </span>
 
-        <i class="material-icons" text-size-28 color-600>
+<!--         <i class="material-icons" text-size-28 color-600 cursor-pointer>
           exit_to_app
-        </i>
+        </i> -->
 
       </div>
 
