@@ -28,33 +28,12 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RutDirective } from './directive/rut.directive';
 
-/* const appRoutes: Routes = [
-  { path: 'crisis-center', component: CrisisListComponent },
-  { path: 'hero/:id',      component: HeroDetailComponent },
-  {
-    path: 'heroes',
-    component: HeroListComponent,
-    data: { title: 'Heroes List' }
-  },
-  { path: '',
-    redirectTo: '/heroes',
-    pathMatch: 'full'
-  },
-  { path: '**', component: PageNotFoundComponent }
-];
- */
 
 const appRoutes: Routes = [
-  { path: 'patient-history', component: MainComponent },
+  { path: 'patient-history', component: PatientHistoryComponent },
   { path: 'form-patient', component: RegistryPatientComponent },
-  /* { path: 'hero/:id',      component: HeroDetailComponent }, */
-/*   {
-    path: 'heroes',
-    component: HeroListComponent,
-    data: { title: 'Heroes List' }
-  }, */
   { path: '',
-    redirectTo: '/patient-history',
+    redirectTo: '/',
     pathMatch: 'full'
   },
   { path: '**', component: MainComponent }
