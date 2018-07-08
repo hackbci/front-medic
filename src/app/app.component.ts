@@ -18,7 +18,7 @@ export class AppComponent {
     age: '12',
     sex: 'Masculino',
     type_identification: 'RUT',
-    number_identification: '123123123123',
+    number_identification: 54,
     nacionality: 'Chileno',
     forecast: 'asdasdasd',
     activity: 'Programador',
