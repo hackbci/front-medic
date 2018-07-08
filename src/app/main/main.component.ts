@@ -5,7 +5,7 @@ import { Component, OnInit} from '@angular/core';
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
-export class MainComponent implements OnInit {
+export class MainComponent {
 
   fieldsForm =     {
     createdAt: 1530995598336,
@@ -41,8 +41,5 @@ export class MainComponent implements OnInit {
     immunizations: 'asd'
   };
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }

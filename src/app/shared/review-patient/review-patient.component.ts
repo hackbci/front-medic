@@ -5,12 +5,10 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './review-patient.component.html',
   styleUrls: ['./review-patient.component.scss']
 })
-export class ReviewPatientComponent implements OnInit {
+export class ReviewPatientComponent {
   @Input() fieldsForm;
 
   constructor() { }
 
-  ngOnInit() {
-  }
 
 }

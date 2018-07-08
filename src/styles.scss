@@ -7,7 +7,12 @@
 
 .expantion-panel {
     &-1 {
-
+        .mat-expansion-panel-header {
+            border: {
+                top: 1px solid #EAEAEA;
+                bottom: 1px solid #EAEAEA;
+            } 
+        }
     }
     &-2 {
         & > .mat-expansion-panel-content {
@@ -21,4 +26,8 @@
         }
 
     }
+
+}
+.mat-tab-labels {
+    justify-content: center;
 }

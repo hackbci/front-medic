@@ -1,59 +1,71 @@
 <div class="general-container-dhp" padding-x-8>
-  <mat-accordion>
+  <mat-accordion *ngFor="let specialities of history">
 
-    <mat-expansion-panel class="expantion-panel-1" (opened)="panelOpenState1 = true" (closed)="panelOpenState1 = false">
-      
-      <!-- start medical speciality -->
+    <!-- start medical speciality 1 -->
+    <mat-expansion-panel *ngFor="let speciality of specialities.speciality" class="expantion-panel-1" (opened)="panelOpenState1 = true"
+      (closed)="panelOpenState1 = false">
+
       <mat-expansion-panel-header>
         <mat-panel-title>
-          Traumatología
+          {{speciality.name}}
         </mat-panel-title>
         <mat-panel-description>
-          {{panelOpenState1 ? '' : 'Haz click para desplegar los casos'}}
+          <!-- {{panelOpenState1 ? '' : 'Click para desplegar los casos'}} -->
         </mat-panel-description>
       </mat-expansion-panel-header>
-      <!-- end medical speciality -->
+      <div class="p-1"></div>
 
-      
-      <mat-expansion-panel class="expantion-panel-2" (opened)="panelOpenState2 = true" (closed)="panelOpenState2 = false">
+      <!-- start medical case 1 -->
+      <mat-expansion-panel *ngFor="let case of speciality.case_medical" class="expantion-panel-2 mt-2" (opened)="panelOpenState2 = true"
+        (closed)="panelOpenState2 = false">
 
-        <!-- start medical case -->
-        <mat-expansion-panel-header>
+
+        <mat-expansion-panel-header class="">
           <mat-panel-title>
-            Partida de pata
+            {{ case.name }}
           </mat-panel-title>
           <mat-panel-description>
-            Currently I am {{panelOpenState2 ? 'open' : 'closed'}}
+            <!-- Currently I am {{panelOpenState2 ? 'open' : 'closed'}} -->
           </mat-panel-description>
         </mat-expansion-panel-header>
-        <!-- end medical case -->
-        <mat-expansion-panel class="expantion-panel-3" (opened)="panelOpenState3 = true" (closed)="panelOpenState3 = false">
-          <!-- start medical visit -->
+        <!-- start medical visit -->
+        <mat-expansion-panel *ngFor="let item of case.consultation; let index = index" class="expantion-panel-3" (opened)="panelOpenState3 = true"
+          (closed)="panelOpenState3 = false">
+
           <mat-expansion-panel-header>
             <mat-panel-title>
-              Visita 1
+              Consulta {{ index + 1 }}
             </mat-panel-title>
             <mat-panel-description>
-              Currently I am {{panelOpenState3 ? 'open' : 'closed'}}
+              <!-- Currently I am {{panelOpenState3 ? 'open' : 'closed'}} -->
             </mat-panel-description>
           </mat-expansion-panel-header>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum molestias est quas. Inventore voluptatem ex atque veniam consequatur quam ab, cupiditate minima sint asperiores. Aut quisquam eaque consectetur dolorem quas.
-          Ea asperiores facilis harum quam nobis quos vel, at eveniet tempora esse voluptates sit dignissimos enim, porro iusto ab odio laborum dolorum eaque aspernatur sunt. Nemo animi libero fugiat dolor.
-          Assumenda magni tempore, voluptatibus cum ab inventore ea pariatur eius minus sequi reprehenderit rem obcaecati excepturi, enim ipsam consequatur? Debitis molestiae consectetur obcaecati? Unde, aspernatur doloribus? Recusandae nemo suscipit quis.
-          Sequi eos illo debitis distinctio sint. Provident iusto facilis illo. Natus rerum consequatur incidunt perspiciatis commodi dolor iure perferendis nostrum. Non tempora eveniet consequatur sint beatae enim quas quis incidunt.
-          Enim saepe atque commodi et nobis alias culpa vero totam error, facilis voluptatem officiis eos autem nihil cumque ratione dolorum, sapiente vitae iusto nisi sit molestias reprehenderit. Ullam, molestias minima.
-          Consectetur, eligendi aliquid. Aliquid ea nobis vero dolores, ratione quidem. Ullam, vero aspernatur aut ab minus architecto ipsam in sequi ipsa nisi distinctio amet porro molestiae dolorum, veniam provident nemo.
-          Quisquam at sequi fugiat facilis recusandae consectetur a molestiae harum nesciunt, similique ipsam aut blanditiis? Dolor vel libero consequuntur soluta molestiae tenetur sunt illo voluptatibus dicta, possimus tempore autem excepturi.
-          Sequi eaque id tenetur explicabo molestias reprehenderit fugit tempora sit veniam cum repellat exercitationem ullam quibusdam, alias error quasi molestiae! Qui quidem, consequuntur repudiandae laboriosam dolores aliquid corrupti natus quam.
-          Veniam tempore suscipit laborum numquam velit exercitationem sint porro molestias quod? Eos excepturi est voluptatum, quibusdam neque reiciendis nobis non? Sed animi omnis sit similique ipsum neque in! Repellat, asperiores.
-          Exercitationem magnam, odit labore minima totam provident at quaerat! Aliquid debitis modi reprehenderit sed veniam quod iste in dignissimos itaque quia rem et nemo, ducimus earum odio numquam nihil. Magnam!</p>
-        
-          </mat-expansion-panel>
-           <!-- end medical visit -->
-    
-      </mat-expansion-panel>
+          <div class="content-visit pt-3">
+              <mat-tab-group class="justify-content-center">
+                <mat-tab label="Síntomas"> 
+                  Síntomas
+                </mat-tab>
+                <mat-tab label="Diagnóstico"> 
+                  Diagnóstico
+                </mat-tab>
+                <mat-tab label="Exámenes"> 
+                  Exámenes
+                </mat-tab>
+                <mat-tab label="Tratamiento"> 
+                  Tratamiento
+                </mat-tab>
+              </mat-tab-group>
+          </div>
 
+        </mat-expansion-panel>
+        <!-- end medical visit -->
+
+      </mat-expansion-panel>
+      <!-- end medical case 1 -->
 
     </mat-expansion-panel>
+    <!-- end medical speciality 1 -->
+
+
   </mat-accordion>
 </div>

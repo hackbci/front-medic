@@ -5,12 +5,10 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './patient-history.component.html',
   styleUrls: ['./patient-history.component.scss']
 })
-export class PatientHistoryComponent implements OnInit {
+export class PatientHistoryComponent {
   @Input() fieldsForm;
 
   constructor() { }
 
-  ngOnInit() {
-  }
 
 }
