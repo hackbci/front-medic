@@ -1,0 +1,38 @@
+<app-footer></app-footer>
+<div class="general-container">
+
+  <div class="container p-0">
+
+    <app-review-patient [fieldsForm]="fieldsForm"></app-review-patient>
+
+    <div *ngIf="fieldsForm.number_identification == 54" class="d-flex justify-content-center w-100 mt-5 pt-5" cursor-pointer>
+      <span>
+        <button color="primary" no-outline mat-button mat-stroked-button mat-fab no-select>
+          <i class="material-icons add-icon" text-size-33>
+          add
+          </i>
+        </button>
+        <span class="pl-2">Registrar paciente</span>
+      </span>
+    </div>
+
+    <div *ngIf="fieldsForm.number_identification != 54" class="d-flex w-100 mt-5 pt-5 pb-3" padding-x-8>
+
+      <button class="btn-add-visit" text-size-30 mat-raised-button color="primary">Primary</button>
+
+    </div>
+
+    <app-detail-history-patient>
+
+    </app-detail-history-patient>
+
+  
+  </div>
+
+</div>
+    
+    
+    
+    
+    
+    

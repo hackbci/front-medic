@@ -2,4 +2,19 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import 'variables';
 @import '../node_modules/bootstrap/scss/bootstrap';
-@import './_helpers-attr.scss'
+@import './_helpers-attr.scss';
+
+
+.expantion-panel {
+    background-color: red !important;
+    &-1 {
+
+    }
+    &-2 {
+        background-color: green;
+        & > .mat-expansion-panel-content {
+            background-color: red !important;
+            display: none !important;
+        }
+    }
+}

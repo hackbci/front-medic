@@ -1,0 +1,31 @@
+<div class="general-container-dhp" padding-x-8>
+  <mat-accordion>
+
+    <mat-expansion-panel class="expantion-panel-1" (opened)="panelOpenState1 = true" (closed)="panelOpenState1 = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Traumatología
+        </mat-panel-title>
+        <mat-panel-description>
+          {{panelOpenState1 ? '' : 'Haz click para desplegar los casos'}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-expansion-panel class="expantion-panel-2" (opened)="panelOpenState2 = true" (closed)="panelOpenState2 = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Partida de pata
+            </mat-panel-title>
+            <mat-panel-description>
+              Currently I am {{panelOpenState2 ? 'open' : 'closed'}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>I'm visible because I am open</p>
+    
+    
+          
+        </mat-expansion-panel>
+
+
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

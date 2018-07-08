@@ -13,10 +13,21 @@ import {MatButtonModule} from '@angular/material/button';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { MainComponent } from './main/main.component';
+import { PatientHistoryComponent } from './views/patient-history/patient-history.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { ReviewPatientComponent } from './shared/review-patient/review-patient.component';
+import { DetailHistoryPatientComponent } from './shared/detail-history-patient/detail-history-patient.component';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainComponent,
+    PatientHistoryComponent,
+    FooterComponent,
+    ReviewPatientComponent,
+    DetailHistoryPatientComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +36,8 @@ import { FormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
