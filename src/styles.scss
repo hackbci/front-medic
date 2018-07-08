@@ -6,15 +6,19 @@
 
 
 .expantion-panel {
-    background-color: red !important;
     &-1 {
 
     }
     &-2 {
-        background-color: green;
         & > .mat-expansion-panel-content {
-            background-color: red !important;
-            display: none !important;
+            & > .mat-expansion-panel-body {
+                padding: {
+                    left: 0px  !important;
+                    right: 0px  !important;
+                    bottom: 0px !important;
+                }
+            }
         }
+
     }
 }

@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./detail-history-patient.component.scss']
 })
 export class DetailHistoryPatientComponent implements OnInit {
+  panelOpenState1 = false;
+  panelOpenState2 = false;
+  panelOpenState3 = false;
 
   constructor() { }
 
